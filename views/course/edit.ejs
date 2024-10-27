@@ -1,0 +1,108 @@
+
+
+    <br /><br /><br />
+    <h1 class="bg-info text-center mt-5">Course Edit</h1>
+    <div class="container">
+      <div class="modal fade" id="btech">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title">Btech</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                action="/CourseUpdate/<%= d._id %>"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div class="mb-3">
+                  <label for="">Name</label>
+                  <input
+                    type="text"
+                    value="<%= n %>"
+                    name="name"
+                    placeholder="Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="">Email</label>
+                  <input
+                    type="text"
+                    value="<%= e %>"
+                    name="email"
+                    placeholder="Email"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="">Phone no.</label>
+                  <input
+                    type="number"
+                    name="phone"
+                    placeholder="Phone Number"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="">DOB</label>
+                  <input
+                    type="date"
+                    name="dob"
+                    placeholder="Date of Birth"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="">Address</label>
+                  <textarea
+                    name="address"
+                    cols="50"
+                    rows="5"
+                    class="form-control"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  Gender
+                  <input type="radio" name="gender" value="male" <%= d.gender= 'male'?'checked':'' %>>male
+                  <input type="radio" name="gender" value="female" <%= d.gender='female'?'checked':'' %>>female
+                </div>
+                <br>
+                <br>
+                <div class="mb-3">
+                  <label for="">Education</label>
+                  <select name="education" class="form-control form-select">
+                    <option value="">Select education</option>
+                    <option value="10" <%= d.education =='10'?'selected':'' %>>10th</option>
+                    <option value="12" <%= d.education =='12'?'selected':'' %>>12th</option>
+                  </select>
+                  <div>
+                    <div class="mb-3">
+                      <label for="">Course</label>
+                      <input
+                        type="text"
+                        readonly
+                        value="btech"
+                        class="form-control"
+                        name="course"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 

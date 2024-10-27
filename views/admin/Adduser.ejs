@@ -1,0 +1,75 @@
+<%-include('./header.ejs') %>
+ <%-include('./sidebar.ejs')%>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">dashboard</li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Quick Example</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form action="/admin/userInsert" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="">Name:</label>
+                    <input type="text" name="n" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="">Email:</label>
+                    <input type="email" name="e" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="">Password:</label>
+                    <input type="password" name="p" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="">Image:</label>
+                    <input type="file" name="image">
+                  </div>
+             
+
+                  <button type="submit" class="btn btn-info">Submit</button>
+                </div>
+                <!-- /.card-body -->
+              </form>
+            </div>
+            <!-- /.card -->
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%-include('./footer.ejs')%>
